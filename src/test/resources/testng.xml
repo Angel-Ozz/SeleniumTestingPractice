@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="TestNG">
+        <classes>
+            <class name="testNG.Day2"/>
+            <class name="testNG.Day1">
+                <methods>
+                    <include name="one"/>
+                </methods>
+            </class>
+            <class name="testNG.Day4"/>
+        </classes>
+    </test>
+    <test name="Login">
+        <classes>
+            <class name="testNG.Day3">
+                <methods>
+                    <exclude name="mobile.*"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
