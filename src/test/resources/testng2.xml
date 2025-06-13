@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Group test Smoke" parallel="tests" thread-count="5">
+    <listeners>
+        <listener class-name="testng.Listeners"/>
+    </listeners>
+    <test name="Regression">
+        <parameter name="name" value="Angel"/>
+        <parameter name="lastName" value="Ocariz"/>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <exclude name="Smoke"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+        <classes>
+            <class name="testng.Day1"/>
+            <class name="testng.Day2"/>
+            <class name="testng.Day3"/>
+            <class name="testng.Day4"/>
+        </classes>
+
+    </test>
+    <test name="Regression 2">
+        <parameter name="name" value="Juan"/>
+        <classes>
+            <class name="testng.Day1"/>
+        </classes>
+    </test>
+</suite>
